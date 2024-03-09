@@ -1,0 +1,70 @@
+project:
+  packs:
+    - pack: Keil::STM32F1xx_DFP
+  setups:
+    - setup: Options for uart
+      debug: "on"
+      misc:
+        - C:
+            - -std=c99
+          C-CPP:
+            - -fno-rtti
+            - -Werror
+            - -funsigned-char
+            - -fshort-enums
+            - -fshort-wchar
+            - -ffunction-sections
+            - -Wno-packed
+            - -Wno-missing-variable-declarations
+            - -Wno-missing-prototypes
+            - -Wno-missing-noreturn
+            - -Wno-sign-conversion
+            - -Wno-nonportable-include-path
+            - -Wno-reserved-id-macro
+            - -Wno-unused-macros
+            - -Wno-documentation-unknown-command
+            - -Wno-documentation
+            - -Wno-license-management
+            - -Wno-parentheses-equality
+            - -Wno-covered-switch-default
+            - -Wno-unreachable-code-break
+          CPP:
+            - -xc++
+            - -std=c++11
+          ASM:
+            - -masm=auto
+          Link:
+            - --map
+            - --load_addr_map_info
+            - --xref
+            - --callgraph
+            - --symbols
+            - --info sizes
+            - --info totals
+            - --info unused
+            - --info veneers
+            - --strict
+            - --summary_stderr
+            - --info summarysizes
+  linker:
+    - script: uart_uart.sct
+  groups:
+    - group: main
+      files:
+        - file: main.c
+          misc:
+            - CPP:
+                - -xc++
+    - group: start
+      files:
+        - file: start.s
+    - group: uart_driver
+      files:
+        - file: uart.h
+        - file: uart.c
+    - group: utils
+      files:
+        - file: util.c
+        - file: util.h
+        - file: string.c
+        - file: string.h

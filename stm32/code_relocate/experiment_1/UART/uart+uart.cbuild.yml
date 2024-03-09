@@ -1,0 +1,126 @@
+build:
+  generated-by: csolution version 2.2.1
+  solution: uart.csolution.yml
+  project: uart.cproject.yml
+  context: uart+uart
+  compiler: AC6
+  device: STM32F103C8
+  device-pack: Keil::STM32F1xx_DFP@2.4.1
+  processor:
+    endian: little
+    fpu: off
+    core: Cortex-M3
+  packs:
+    - pack: Keil::STM32F1xx_DFP@2.4.1
+      path: ${CMSIS_PACK_ROOT}/Keil/STM32F1xx_DFP/2.4.1
+  optimize: none
+  debug: on
+  misc:
+    ASM:
+      - -masm=auto
+    C:
+      - -std=c99
+      - -fno-rtti
+      - -Werror
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+      - -Wno-covered-switch-default
+      - -Wno-unreachable-code-break
+    CPP:
+      - -xc++
+      - -std=c++11
+      - -fno-rtti
+      - -Werror
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+      - -Wno-covered-switch-default
+      - -Wno-unreachable-code-break
+    Link:
+      - --map
+      - --load_addr_map_info
+      - --xref
+      - --callgraph
+      - --symbols
+      - --info sizes
+      - --info totals
+      - --info unused
+      - --info veneers
+      - --strict
+      - --summary_stderr
+      - --info summarysizes
+  define:
+    - STM32F10X_MD
+  add-path:
+    - ${CMSIS_PACK_ROOT}/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  output-dirs:
+    intdir: tmp/uart/uart
+    outdir: out/uart/uart
+    rtedir: RTE
+  output:
+    - type: elf
+      file: uart.axf
+  linker:
+    script: uart_uart.sct
+  groups:
+    - group: main
+      files:
+        - file: main.c
+          category: sourceC
+          misc:
+            CPP:
+              - -xc++
+    - group: start
+      files:
+        - file: start.s
+          category: sourceAsm
+    - group: uart_driver
+      files:
+        - file: uart.h
+          category: header
+        - file: uart.c
+          category: sourceC
+    - group: utils
+      files:
+        - file: util.c
+          category: sourceC
+        - file: util.h
+          category: header
+        - file: string.c
+          category: sourceC
+        - file: string.h
+          category: header
+  constructed-files:
+    - file: RTE/_uart/RTE_Components.h
+      category: header
+  licenses:
+    - license: <unknown>
+      packs:
+        - pack: Keil::STM32F1xx_DFP@2.4.1

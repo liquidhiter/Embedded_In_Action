@@ -1,0 +1,9 @@
+build-idx:
+  generated-by: csolution version 2.2.1
+  csolution: uart.csolution.yml
+  cprojects:
+    - cproject: uart.cproject.yml
+  cbuilds:
+    - cbuild: uart+uart.cbuild.yml
+      project: uart
+      configuration: +uart

@@ -1,0 +1,278 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Objects\uart.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Objects\uart.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Sat Mar  9 17:34:58 2024
+<BR><P>
+<H3>Maximum Stack Usage =        120 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+mymain &rArr; uart_receive &rArr; uart_print &rArr; uart_send
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[4]">EXTI15_10_IRQHandler</a> from exception.o(.text.EXTI15_10_IRQHandler) referenced from start.o(RESET)
+ <LI><a href="#[0]">HardFault_Handler_ASM</a> from start.o(.text) referenced from start.o(RESET)
+ <LI><a href="#[2]">SVCall_Handler</a> from exception.o(.text.SVCall_Handler) referenced from start.o(RESET)
+ <LI><a href="#[3]">SysTick_Handler</a> from systick.o(.text.SysTick_Handler) referenced from start.o(RESET)
+ <LI><a href="#[1]">UsageFault_Handler_ASM</a> from start.o(.text) referenced from start.o(RESET)
+ <LI><a href="#[5]">mymain</a> from main.o(.text.mymain) referenced from start.o(.text)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[1f]"></a>Reset_Handler</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, start.o(.text), UNUSED)
+
+<P><STRONG><a name="[13]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemInit
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymain
+</UL>
+
+<P><STRONG><a name="[7]"></a>__rt_memcpy</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+</UL>
+
+<P><STRONG><a name="[20]"></a>_memcpy_lastbytes</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_v6.o(.text), UNUSED)
+
+<P><STRONG><a name="[1d]"></a>__aeabi_memclr</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemInit
+</UL>
+
+<P><STRONG><a name="[21]"></a>__rt_memclr</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr.o(.text), UNUSED)
+
+<P><STRONG><a name="[9]"></a>_memset</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset_w
+</UL>
+
+<P><STRONG><a name="[8]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
+</UL>
+
+<P><STRONG><a name="[22]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[23]"></a>__rt_memcpy_w</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[24]"></a>_memcpy_lastbytes_aligned</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[25]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[26]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[27]"></a>__rt_memclr_w</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[a]"></a>_memset_w</STRONG> (Thumb, 74 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset
+</UL>
+
+<P><STRONG><a name="[4]"></a>EXTI15_10_IRQHandler</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, exception.o(.text.EXTI15_10_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = EXTI15_10_IRQHandler &rArr; puts &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearIRQ
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Clear_IRQ
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Inspect
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> start.o(RESET)
+</UL>
+<P><STRONG><a name="[d]"></a>EXTI_Clear_IRQ</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, exti.o(.text.EXTI_Clear_IRQ))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = EXTI_Clear_IRQ
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
+</UL>
+
+<P><STRONG><a name="[16]"></a>EXTI_Init</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, exti.o(.text.EXTI_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = EXTI_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymain
+</UL>
+
+<P><STRONG><a name="[6]"></a>HardFault_Handler</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, exception.o(.text.HardFault_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HardFault_Handler &rArr; put_s_hex &rArr; puthex &rArr; puts &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_s_hex
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puthex
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+</UL>
+<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler_ASM
+</UL>
+
+<P><STRONG><a name="[15]"></a>KEY_Init</STRONG> (Thumb, 82 bytes, Stack size 12 bytes, key.o(.text.KEY_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = KEY_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymain
+</UL>
+
+<P><STRONG><a name="[b]"></a>KEY_Inspect</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, key.o(.text.KEY_Inspect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = KEY_Inspect
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
+</UL>
+
+<P><STRONG><a name="[28]"></a>LED_Init</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, led.o(.text.LED_Init), UNUSED)
+
+<P><STRONG><a name="[11]"></a>LED_Toggle</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, led.o(.text.LED_Toggle))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LED_Toggle
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+</UL>
+
+<P><STRONG><a name="[e]"></a>NVIC_ClearIRQ</STRONG> (Thumb, 30 bytes, Stack size 4 bytes, nvic.o(.text.NVIC_ClearIRQ))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = NVIC_ClearIRQ
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
+</UL>
+
+<P><STRONG><a name="[17]"></a>NVIC_EnableIRQ</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, nvic.o(.text.NVIC_EnableIRQ))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = NVIC_EnableIRQ
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymain
+</UL>
+
+<P><STRONG><a name="[2]"></a>SVCall_Handler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, exception.o(.text.SVCall_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SVCall_Handler &rArr; puts &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> start.o(RESET)
+</UL>
+<P><STRONG><a name="[3]"></a>SysTick_Handler</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, systick.o(.text.SysTick_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = SysTick_Handler &rArr; puts &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Toggle
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> start.o(RESET)
+</UL>
+<P><STRONG><a name="[29]"></a>SysTick_Init</STRONG> (Thumb, 42 bytes, Stack size 4 bytes, systick.o(.text.SysTick_Init), UNUSED)
+
+<P><STRONG><a name="[2a]"></a>UsageFaultEnable</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, exception.o(.text.UsageFaultEnable), UNUSED)
+
+<P><STRONG><a name="[12]"></a>UsageFault_Handler</STRONG> (Thumb, 184 bytes, Stack size 24 bytes, exception.o(.text.UsageFault_Handler), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_s_hex
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puthex
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+</UL>
+
+<P><STRONG><a name="[5]"></a>mymain</STRONG> (Thumb, 102 bytes, Stack size 80 bytes, main.o(.text.mymain))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = mymain &rArr; uart_receive &rArr; uart_print &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_get
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Init
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_println
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_receive
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> start.o(.text)
+</UL>
+<P><STRONG><a name="[10]"></a>put_s_hex</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, mystring.o(.text.put_s_hex))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = put_s_hex &rArr; puthex &rArr; puts &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puthex
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+</UL>
+
+<P><STRONG><a name="[f]"></a>puthex</STRONG> (Thumb, 100 bytes, Stack size 24 bytes, mystring.o(.text.puthex))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = puthex &rArr; puts &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_s_hex
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+</UL>
+
+<P><STRONG><a name="[c]"></a>puts</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, mystring.o(.text.puts))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = puts &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_s_hex
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puthex
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCall_Handler
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
+</UL>
+
+<P><STRONG><a name="[2b]"></a>relocate_memcpy</STRONG> (Thumb, 50 bytes, Stack size 20 bytes, util.o(.text.relocate_memcpy), UNUSED)
+
+<P><STRONG><a name="[2c]"></a>relocate_memset</STRONG> (Thumb, 38 bytes, Stack size 12 bytes, util.o(.text.relocate_memset), UNUSED)
+
+<P><STRONG><a name="[1c]"></a>systemInit</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(.text.systemInit), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+
+<P><STRONG><a name="[19]"></a>uart_get</STRONG> (Thumb, 38 bytes, Stack size 4 bytes, uart.o(.text.uart_get))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = uart_get
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymain
+</UL>
+
+<P><STRONG><a name="[14]"></a>uart_init</STRONG> (Thumb, 112 bytes, Stack size 12 bytes, uart.o(.text.uart_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = uart_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymain
+</UL>
+
+<P><STRONG><a name="[1e]"></a>uart_print</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, util.o(.text.uart_print))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = uart_print &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_receive
+</UL>
+
+<P><STRONG><a name="[18]"></a>uart_send</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, uart.o(.text.uart_send))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = uart_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puthex
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_print
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymain
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_println
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[1a]"></a>uart_receive</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, main.o(.text.uart_receive))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = uart_receive &rArr; uart_print &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_print
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymain
+</UL>
+
+<P><STRONG><a name="[1b]"></a>uart_println</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, main.o(.text.uart_println))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = uart_println &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymain
+</UL>
+
+<P><STRONG><a name="[0]"></a>HardFault_Handler_ASM</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, start.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HardFault_Handler_ASM &rArr; HardFault_Handler &rArr; put_s_hex &rArr; puthex &rArr; puts &rArr; uart_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> start.o(RESET)
+</UL>
+<P><STRONG><a name="[1]"></a>UsageFault_Handler_ASM</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, start.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> start.o(RESET)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

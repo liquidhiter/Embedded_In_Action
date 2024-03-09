@@ -1,0 +1,8 @@
+# CMSIS Build Audit File generated on 2024-03-05T21:26:41
+
+# Project Description File: c:/Users/maxin/Desktop/keil_projects/stm32/code_relocate/experiment_1/UART/uart+uart.cprj
+
+# Toolchain Configuration File: C:/Users/maxin/.vcpkg/artifacts/2139c4c6/tools.open.cmsis.pack.cmsis.toolbox/2.2.1/etc/AC6.6.18.0.cmake
+
+# Package: Keil::STM32F1xx_DFP@2.4.1
+  Location: C:\Users\maxin\AppData\Local\arm\packs/Keil/STM32F1xx_DFP/2.4.1/
